@@ -27,8 +27,8 @@ def _bfa(target, salt, length, count, base=''):
 
 def main():
     parser = argparse.ArgumentParser(description='md5 brute force attack.')
-    parser.add_parser('target', action='store', nargs=None, type=str, metavar='HASH')
-    parser.add_parser('-s', '--salt', nargs='?', type=str)
+    parser.add_argument('target', action='store', nargs=None, type=str, metavar='HASH')
+    parser.add_argument('-s', '--salt', nargs='?', type=str)
     
     args = parser.parse_args()
     target = args.target
